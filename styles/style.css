@@ -1,5 +1,99 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--background-image, url(../images/cover-image-dark.png));
+  background-color: var(--background-color, #000028);
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+}
+
+.header {
+  /* Если dvh не поддерживается, то используется min-height: 100vh. */
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+.header__rec-logo {
+  text-transform: uppercase;
+  position: absolute;
+  top: var(--section-padding);
+  right: var(--section-padding);
+  margin-right: 0.9rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  color: var(--secondary-color);
+}
+
+.header__rec-logo::after {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 4px 2px var(--secondary-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header__theme-menu-button {
+  appearance: none;
+  line-height: 100%;
+  text-transform: lowercase;
+  border: none;
+  color: var(--secondary-color);
+  padding: 0.15rem 1.3rem;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--secondary-color);
+}
+
+.header__description {
+  justify-self: end;
+  align-self: center;
+  height: fit-content;
+  max-width: 36.4rem;
+}
+
+@media (width >= 768px) {
+  .header__title {
+    margin-left: calc(var(--section-padding) * -1);
+  }
+
+  .header__description {
+    max-width: 50%;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
