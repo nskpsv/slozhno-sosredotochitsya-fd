@@ -6,10 +6,7 @@
   font-size: var(--main-font-size, 1.8rem); /* 1.8rem = 18px (см. globals.css)*/
   line-height: var(--line-height, 130%);
   background-color: var(--background-color, #000028);
-  background-image: var(
-    --background-image,
-    url(../images/cover-image-dark.png)
-  );
+  background-image: var(--background-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -217,7 +214,7 @@ h4.article__title {
   }
 
   .section {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr;
   }
 
   .section_layout_sidebar {
@@ -263,6 +260,10 @@ h4.article__title {
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .section_layout_cards .section__content {
