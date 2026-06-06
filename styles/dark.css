@@ -11,6 +11,7 @@
   --background-color: #000028;
   --title-color: #db00ff;
 
+  --theme-menu-color: var(--accent-color);
   --section-title-color: var(--accent-color);
   --accent-text-color: var(--background-color);
   --article-text-color: var(--primary-color);

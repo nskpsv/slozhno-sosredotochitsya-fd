@@ -11,9 +11,14 @@
   --background-color: #fff1f7;
   --title-color: #ffc2e6;
 
+  --theme-menu-color: var(--primary-color);
   --section-title-color: var(--primary-color);
   --accent-text-color: var(--primary-color);
   --decorated-zone-color: var(--primary-color);
+}
+
+.theme-light .header__rec-logo {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,8 +29,13 @@
     --background-color: #fff1f7;
     --title-color: #ffc2e6;
 
+    --theme-menu-color: var(--primary-color);
     --section-title-color: var(--primary-color);
     --accent-text-color: var(--primary-color);
     --decorated-zone-color: var(--primary-color);
+  }
+
+  .header__rec-logo {
+    display: none;
   }
 }
