@@ -1,18 +1,21 @@
 :root {
   --background-image: url(../images/cover-image-dark.png);
   --primary-color: #f1b2ce;
-  --secondary-color: #ff0070;
   --accent-color: #ff0070;
-  --accent-text-color: #000028;
   --background-color: #000028;
   --title-color: #db00ff;
   --font-family: "IBM Plex mono", sans-serif;
-  --font-size: 1.8rem; /* 1.8rem = 18px (см. globals.css)*/
+  --main-font-size: 1.8rem; /* 1.8rem = 18px (см. html в globals.css )*/
   --line-height: 130%;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --section-padding: 1rem;
-  --max-content-width: 102.4rem;
+  --section-content-gap: 2rem;
+
+  --section-title-color: var(--accent-color);
+  --accent-text-color: var(--background-color);
+  --article-text-color: var(--primary-color);
+  --decorated-zone-color: var(--accent-color);
 }
 
 @media (width >= 768px) {

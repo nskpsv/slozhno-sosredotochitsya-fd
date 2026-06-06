@@ -12,9 +12,16 @@ html {
 }
 
 body {
+  margin: 0 auto;
+  font-family: var(--font-family, "IBM Plex mono", sans-serif);
+  font-weight: var(--font-weight-normal, 400);
+  font-size: var(
+    --main-font-size,
+    1.8rem
+  ); /* 1.8rem = 18px (см. правила html)*/
+  line-height: var(--line-height, 130%);
   min-inline-size: 37.5rem;
   max-inline-size: 144rem;
-  margin: 0 auto;
 }
 
 h1,
@@ -56,35 +63,35 @@ a {
   position: absolute;
   width: 2.5rem;
   height: 2.5rem;
-  border-color: var(--secondary-color);
   border-style: solid;
+  border-color: var(--decorated-zone-color, #ff0070);
 }
 
 .decorated-zone::before {
-  bottom: var(--section-padding);
-  left: var(--section-padding);
+  bottom: var(--section-padding, 1rem);
+  left: var(--section-padding, 1rem);
   border-width: 0 0 0.1rem 0.1rem;
 }
 
 .decorated-zone::after {
-  top: var(--section-padding);
-  right: var(--section-padding);
+  top: var(--section-padding, 1rem);
+  right: var(--section-padding, 1rem);
   border-width: 0.1rem 0.1rem 0 0;
 }
 
 .hero-text {
-  font-weight: var(--font-weight-bold);
+  color: var(--title-color, #db00ff);
+  font-weight: var(--font-weight-bold, 700);
   font-size: clamp(11.6rem, 11.2184rem + 1.0178vw, 12rem);
   line-height: 83%;
   text-transform: lowercase;
-  color: var(--title-color);
   text-shadow: 0.4rem 0.4rem 0 var(--accent-color);
 }
 
 .title-decor {
-  background-color: var(--accent-color);
-  color: var(--accent-text-color);
-  font-weight: var(--font-weight-bold);
+  color: var(--accent-text-color, #000028);
+  font-weight: var(--font-weight-bold, 700);
+  background-color: var(--accent-color, #ff0070);
 }
 
 @media (width >= 768px) {
