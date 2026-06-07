@@ -13,7 +13,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: var(--font-family, "IBM Plex mono", Arial, sans-serif);
+  font-family: var(--font-family, "IBM Plex Mono"), Arial, sans-serif;
   font-weight: var(--font-weight-normal, 400);
   font-size: var(--main-font-size, 1.8rem); /* 1.8rem = 18px (см. правила html)*/
   line-height: var(--line-height, 130%);
